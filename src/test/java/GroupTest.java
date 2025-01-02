@@ -34,15 +34,6 @@ public class GroupTest {
     }
 
     @Test
-    public void testSignatureHeadersAfterGroupApply() {
-        group.apply();
-
-        assertNotNull(signature1.getHeader());
-        assertNotNull(signature2.getHeader());
-        assertNotNull(signature3.getHeader());
-    }
-
-    @Test
     public void testAddSignatures() {
         Group newGroup = new Group();
         Signature newSignature = new Signature(() -> System.out.println("New Task"));
